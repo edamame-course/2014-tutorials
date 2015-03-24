@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+
+        <title>EDAMAME : QIIME Tutorial 2</title>
+        <meta name="description" content="course materials & tutorials">
+
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class=row-fluid>
+                <div id=header class=span12>
+                    <h4><a class=brand href="http://edamame-course.org">EDAMAME</a>
+    <small>course materials & tutorials</small>
+</h4>
+
+                </div>
+            </div>
+
+            <div class=row-fluid>
+                
+                
+                    <div id=navigation class=span3>
+                        
+<ul class="nav nav-list">
+    <li class=nav-header>HOME</li>
+    <li><a href="index.html">EDAMAME course materials</a></li>
+    <li class=divider></li>
+    <li class=nav-header>Before We Begin</li>
+    <li><a href="https://edamame-course.github.io/docs/general_set_up_guidelines.html">Getting Set Up For The Course</a></li>
+    <li><a href="https://edamame-course.github.io/docs/intro_to_ec2_instance.html">All Users: Setting up an EC2 instance</a></li>
+    <li><a href="https://edamame-course.github.io/docs/mobaxterm.html">Windows Users: Connecting to your AWS EC2 instance</a></li>
+    <li><a href="https://edamame-course.github.io/docs/mac_os_linux_connect_to_ec2.html">Mac and Linux Users: Connecting to your AWS EC2 instance</a></li>
+    <li><a href="https://edamame-course.github.io/docs/extra/macqiime_installation.html">Mac Users: Installing MacQIIME</a></li>
+    <li><a href="https://edamame-course.github.io/docs/QIIME_VB_for_Windows.html">Windows Users: Installing a Virtual Box to run QIIME on your own Windows computer</a></li>
+    <li class=divider></li>
+    <li class=nav-header>Wednesday, August 13th</li>
+    <li><a href="https://edamame-course.github.io/docs/august_13.html">Wednesday, August 13th Overview</a></li>
+    <li><a href="https://edamame-course.github.io/docs/the_shell.html">An Introduction To Using The Shell</a></li>
+    <li><a href="https://edamame-course.github.io/docs/intro_qiime_tutorial.html">Introduction to Data Analysis with QIIME</a></li>
+    <li class=divider></li>
+    <li class=nav-header>Thursday, August 14th</li>
+    <li><a href="https://edamame-course.github.io/docs/august_14.html">Thursday, August 14th Overview</a></li>
+    <li><a href="https://edamame-course.github.io/docs/extra/Presentations/2014-08-14-AM_Ashley_Lecture2.pdf?raw=true">Alpha Diversity Lecture</a></li>
+    <li><a href="https://edamame-course.github.io/docs/qiime_2_tutorial.html">QIIME Tutorial Part Two</a></li>
+    <li><a href="https://edamame-course.github.io/docs/extra/Presentations/2014-08-14-PM_Ashley_Lecture3.pdf?raw=true">Beta Diversity Lecture</a></li>
+    <li><a href="https://edamame-course.github.io/docs/qiime_3.html">QIIME Tutorial Part Three</a></li>
+    <li><a href="https://edamame-course.github.io/docs/extra/Presentations/2014-edamame-assembly_TBrown.pdf?raw=true">Titus Brown's Intro to Metagenomics Lecture</a></li>
+    <li class=divider></li>
+    <li class=nav-header>Friday, August 15th</li>
+    <li><a href="https://edamame-course.github.io/docs/august_15.html">Friday, August 15th Overview</a></li>
+    <li><a href="https://edamame-course.github.io/docs/intro_to_ec2_instance.html">Introduction to using Amazon EC2</a></li>
+    <li><a href="http://pschloss.github.io/2014_08_15-mothur/#1">Pat Schloss's Presentation</a></li>
+    <li><a href="http://www.mothur.org/wiki/MiSeq_SOP">mothur to the max</a></li>
+    <li class=divider></li>
+    <li class=nav-header>Saturday, August 16th</li>
+    <li><a href="https://edamame-course.github.io/docs/august_15.html">Saturday, August 16th Overview</a></li>
+    <li><a href="">Introduction to Metagenomics</a></li>
+    <li><a href="">Using BLAST at the command line</a></li>
+    <li class=divider></li>
+    <li class=nav-header>Sunday, August 17th</li>
+    <li>Brunch with Jim Tiedje!</li>
+    <li><a href="">Metagenome Assembly</a></li>
+    <li class=divider></li>
+    <li class=nav-header>Monday, August 18th</li>
+    <li><a href="https://github.com/edamame-course/docs/august_18.html">Monday, August 18th Overview</a></li>
+    <li><a href="https://github.com/edamame-course/docs/blob/gh-pages/extra/Presentations/2014-08-18-AM_Ashley_Lecture4.pdf?raw=true">Hypothesis testing, identifying gradients, and linking environmental and community data</a></li>
+    <li><a href="https://github.com/edamame-course/docs/tree/gh-pages/extra/Jones_R_Tutorial_Files">Using R for community ecology analyses</a></li>
+    <li><a href=""></a></li>
+    <li class=divider></li>
+    <li class=nav-header>Tuesday, August 19th</li>
+    <li><a href="">Jim Cole - Guest Lecture</a></li>
+    <li><a href="http://adina-howe.readthedocs.org/en/latest/">Adina Howe: Tutorial on working with NCBI and MG-RAST and their APIs</a></li>
+    <li><a href="https://github.com/edamame-course/docs/blob/gh-pages/extra/Presentations/2014-08-19-Docherty_NEON.pdf?raw=true">Kathryn Docherty - Guest Lecture</a></li>
+    <li><a href="https://edamame-course.github.io/docs/metagenome_assembly_and_annotation.html">Josh: Metagenome Assembly, Annotation, and Quality Assessment</a></li>
+    <li><a href="https://edamame-course.github.io/docs/using_dropbox_on_your_ec2_machine.html">Josh: Installing Dropbox on any computer from the command line</a></li>
+    <li><a href="https://github.com/edamame-course/docs/blob/gh-pages/_posts/2014-08-19_database_questions.md">Self Guided Tour of Databases</a></li>
+    <li><a href="">Josh speaks about the wild and woolly world of other marker regions!</a></li>
+    <li><a href="https://github.com/edamame-course/docs/blob/gh-pages/extra/Presentations/2014-08-19-Peralta.pdf?raw=true"></a>Guest lecture from Ariane Peralta on Human-impacted ecosystems</li>
+    <li><a href="https://github.com/edamame-course/docs/blob/gh-pages/extra/Presentations/2014-08-20-metagenomic_visualization.pdf?raw=true">Tracy gives a tour of data visualization!</a></li>
+    <li class=divider></li>
+    <li class=nav-header>Wednesday, August 20th</li>
+    <li><a href="https://edamame-course.github.io/docs/extra/Presentations/2014-08-20_Cluster_Computing_EDAMAME.pdf?raw=true">Guest Lecture from Dirk Colbry - Using a Computer Cluster</a></li>
+    <li>Course Wrap-Up and Evaluation</li>
+</ul>
+
+                    </div>
+
+                    <div id=content class=span9>
+                        <div class=page-header>
+    <h2>QIIME Tutorial 2
+        
+    </h2>
+</div>
+
+<h3 id="handouts-of-workflow-charts-are-available-for-the-qiime-workflow-discussed-in-these-tutorials:">Handouts of workflow charts are available for the QIIME workflow discussed in these tutorials:</h3>
+
+<ul>
+<li> <a href="https://github.com/edamame-course/docs/tree/gh-pages/extra/Handouts/QIIMEFlowChart_IlluminaPairedEnds_13aug2014.pdf?raw=true">Paired-End Illumina</a></li>
+<li> <a href="https://github.com/edamame-course/docs/tree/gh-pages/extra/Handouts/QIIMEFlowChart_454_13aug2014.pdf?raw=true">454</a></li>
+</ul>
+
+<h2 id="welcome-back,-microbe-enthusiasts!">Welcome back, Microbe Enthusiasts!</h2>
+
+<h2 id="creating-an-otu-table-in-qiime">Creating an OTU table in QIIME</h2>
+
+<p>Previously, we left off with quality-controlled merged Illumina paired-end sequences, picked OTUs and an alignment of the representative sequences from those OTUs.</p>
+
+<h3 id="3.1-assign-taxonomy-to-representative-sequences">3.1  Assign taxonomy to representative sequences</h3>
+
+<p>Navigate into the QIIMETutorial directory using <code>cd</code>, and, enter the QIIME environment. We will use the RDP classifier with a greengenes 16S rRNA reference database (both default options in QIIME).  This script will take a few minutes to run on a lap-top. Documentation is <a href="http://qiime.org/scripts/assign_taxonomy.html">here</a>.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">assign_taxonomy.py -i cdhit_rep_seqs/cdhit_rep_seqs.fasta -m rdp -c 0.8
+</code></pre></div>
+<p>Navigate into the new rdp_assigned_taxonomy directory and inspect the head of the tax_assignments file.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">head cdhit_rep_seqs_tax_assignments.txt
+</code></pre></div>
+<p><img src="https://github.com/edamame-course/docs/raw/gh-pages/img/QIIMETutorial2_IMG/IMG_11.jpg" alt="img11"></p>
+
+<p>This assignment file is used anytime an OTU ID (the number) needs to be linked with its taxonomic assignment.
+<em>Note</em> that this list of OTUs and taxonomic assignments includes our &quot;failed-to-align&quot; representative sequences.  We will remove these at the next step.</p>
+
+<h3 id="3.2-make-an-otu-table,-append-the-assigned-taxonomy,-and-exclude-failed-alignment-otus">3.2  Make an OTU table, append the assigned taxonomy, and exclude failed alignment OTUs</h3>
+
+<p>The OTU table is the table on which all ecological analyses (e.g. diversity, patterns, etc) is performed.  However, building the OTU table is relatively straightforward (you just count how many of each OTU was observed in each sample).  Instead, every step up until building the OTU table is important.  The algorithms that are chosen to assemble reads, quality control reads, define OTUs, etc are all gearing up to this one summarization. Documentation for make_otu_table.py is <a href="http://qiime.org/scripts/make_otu_table.html">here</a>. Note that the &quot;map&quot; file is not the actually mapping file, but the OTU cluster file (the output of cdhit).
+Navigate back into the &quot;QIIMETutorial&quot; directory to execute the script.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">make_otu_table.py -i cdhit_picked_otus/combined_seqs_otus.txt -o Schloss_otu_table.biom -e pynast_aligned/cdhit_rep_seqs_failures_names.txt -t rdp_assigned_taxonomy/cdhit_rep_seqs_tax_assignments.txt
+</code></pre></div>
+<p>We used our previously-created list of failed-seq-alignments with the <code>-e</code> option to exclude these OTUs.
+Inspect the .biom table.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">head Schloss_otu_table.biom
+</code></pre></div>
+<p><img src="https://github.com/edamame-course/docs/raw/gh-pages/img/QIIMETutorial2_IMG/IMG_12.jpg" alt="img12"></p>
+
+<p>Be not alarmed! This file is in .biom table format.  Whereas a traditional taxon (OTU) table in ecology is often a matrix of samples (communities) by taxa (OTUs), there are just too many taxa in microbial communities for the traditional table to be efficiently used in computation.  Thus, the .biom format was developed.  General information about the .biom format is <a href="http://biom-format.org/">here</a>.  Scroll down through the terminal screen, to observe that the taxonomic assignments were incorporated into the OTU table.</p>
+
+<p>We can get a summary of everything in the .biom OTU table using a script that begins with <code>biom</code>, which indicates the special format and handling of the biom data table. The syntax and structure of these biom scripts are only slightly bit different from other QIIME scripts. More information about biom format motivation is <a href="http://biom-format.org/documentation/biom_format.html">here</a>. <strong>This is an important script.</strong>  Documentation for <code>summarize_table</code> is <a href="http://biom-format.org/documentation/summarizing_biom_tables.html">here</a>.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">biom summarize_table -i Schloss_otu_table.biom -o summary_Schloss_otu_table.txt
+</code></pre></div>
+<p>The summary file contains information about the number of sequences per sample, which will help us to make decisions about rarefaction (subsampling).  When we inspect the file, we see that sample F3D142.S208 has 2212 reads, the minimum observed.  This is what we will use as a subsampling depth.  Also, a lot of the info in this file is typically reported in methods sections of manuscripts.</p>
+
+<p><img src="https://github.com/edamame-course/docs/raw/gh-pages/img/QIIMETutorial2_IMG/IMG_13.jpg" alt="img13"></p>
+
+<h3 id="3.3-make-a-phylogenetic-tree">3.3  Make a phylogenetic tree</h3>
+
+<p>We will make a phylogenetic tree of the short-read sequences so that we can use information about the relatedness among taxa to estimate and compare diversity.  We will use FastTree for this.<br>
+It is best not to use trees made from short-reads as very robust hypotheses of evolution. I suggest using trees from short-read sequences for ecological analyses, visualization and hypothesis-generation rather than strict phylogenetic inference.
+Documentation is <a href="http://qiime.org/scripts/make_phylogeny.html">here</a>.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">mkdir fasttree_cdhit
+</code></pre></div><div class="highlight"><pre><code class="language-text" data-lang="text">make_phylogeny.py -i pynast_aligned/cdhit_rep_seqs_aligned.fasta -t fasttree -o fasttree_cdhit/fasttree_cdhit.tre
+</code></pre></div>
+<p>A few notables:  The tree algorithm input is the alignment file; the output extension is .tre.</p>
+
+<p>Inspect the new tree file (<a href="http://marvin.cs.uidaho.edu/Teaching/CS515/newickFormat.html">Newick</a> format). The OTU ID is given first, and then the branch length to the next node. This format is generally compatible with other tree-building and viewing software. For example, I have used it to input into the <a href="http://itol.embl.de/">Interactive Tree of Life</a> to build visually appealing figures. <a href="http://topiaryexplorer.sourceforge.net/">Topiary Explorer</a> is another options for visualization, and is a QIIME add-on.</p>
+
+<h3 id="3.4-rarefaction-(subsampling)">3.4 Rarefaction (subsampling)</h3>
+
+<p>Navigate back into the QIIMETutorial directory.</p>
+
+<p>Before we start any ecological analyses, we want to evenly subsample (&quot;rarefy&quot;, but see this <a href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003531">discussion</a>) all the samples to an equal (&quot;even&quot;) number of sequences so that they can be directly compared to one another. Many heartily agree (as exampled by <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1462-2920.2011.02550.x/full">Gihring et al. 2011</a>) that sample-to-sample comparisons cannot be made unless subsampling to an equal sequencing depth is performed.</p>
+
+<p>To subsample the OTU table, we need to decide the appropriate subsampling depth. What is the best number of sequences?  As a rule, we must subsample to the minimum number of sequences per sample for all samples <em>included</em> in analyses.  Sometimes this is not straightforward, but here are some things to consider:</p>
+
+<ul>
+<li> Are there low-sequence samples that have very few reads because there was a technological error (a bubble, poor DNA extraction, poor amplification, etc)?  These samples should be removed (and hopefully re-sequenced), especially if there is no biological explanation for the low number of reads.</li>
+<li> How complex is the community?  An acid-mine drainage community is less rich than a soil, and so fewer sequences per sample are needed to evaluate diversity.</li>
+<li> How exhaustive is the sequencing?  If this is unknown, an exploratory rarefaction analysis could be done to estimate.</li>
+<li> How important is it to keep all samples in the analysis?  Consider the costs and benefits of, for example, dropping one not-very-well-sequenced replicate in favor of increasing overall sequence information.  If you&#39;ve got $$ to spare, built-in sequencing redundancy/replication is helpful for this.</li>
+<li> Don&#39;t fret!  Soon sequencing will be so inexpensive that we will be sequencing every community exhaustively and not have to worry about it anymore.</li>
+</ul>
+
+<p>In this example dataset, we want to keep all of our samples, so we will subsample to 2212.  Documentation is <a href="http://qiime.org/scripts/single_rarefaction.html?highlight=rarefaction">here</a>.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">single_rarefaction.py -i Schloss_otu_table.biom -o Schloss_otu_table_even2212.biom -d 2212
+</code></pre></div>
+<p>We append _even2212 to the end of the table to distinguish it from the full table.  This is even2212 table is the final biom table on which to perform ecological analyses.  If we run the biom summary command, we will now see that every sample in the new table has exactly the same number of sequences:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">biom summarize_table -i Schloss_otu_table_even2212.biom -o summary_Schloss_otu_table_even2212.txt
+</code></pre></div>
+<p><img src="https://github.com/edamame-course/docs/raw/gh-pages/img/QIIMETutorial2_IMG/IMG_14.jpg" alt="img14"></p>
+
+<p>Our &quot;clean&quot; dataset has 19 samples and 858 OTUs defined at 97% sequence identity.</p>
+
+<p>There is a <a href="http://www.ploscompbiol.org/article/info%3Adoi%2F10.1371%2Fjournal.pcbi.1003531">recent paper</a> that suggests that even subsampling is not necessary, but this is very actively debated.</p>
+
+<h3 id="3.5-calculating-alpha-(within-sample)-diversity">3.5 Calculating alpha (within-sample) diversity</h3>
+
+<p>Navigate back into the QIIMETutorial directory, and make a new directory for alpha diversity results.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">mkdir alphadiversity_even2212
+</code></pre></div>
+<p>We will calculate richness (observed # taxa) and phylogenetic diversity (PD) for each sample.  Documentation is <a href="http://qiime.org/scripts/alpha_diversity.html">here</a>.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">alpha_diversity.py -i Schloss_otu_table_even2212.biom -m observed_species,PD_whole_tree -o alphadiversity_even2212/cdhit_alpha_even2212.txt -t fasttree_cdhit/fasttree_cdhit.tre
+</code></pre></div>
+<p>As always, inspect the results file.  What are the ranges that were observed in richness and PD?</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">head alphadiversity_even2212/cdhit_alpha_even2212.txt
+</code></pre></div>
+<p>QIIME offers a variety of additional options for calculating diversity, and the -s option prints them all!</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">alpha_diversity.py -s
+</code></pre></div>
+<p>There is workflow script, <a href="http://qiime.org/scripts/alpha_rarefaction.html">alpha_rarefaction.py</a>, which is useful if you want to udnerstand how measures of alpha diversity change with sequencing effort.  The script calculates alpha diversity on iterations of a subsampled OTU table.</p>
+
+<h3 id="3.6-visualizing-alpha-diversity">3.6 Visualizing alpha diversity</h3>
+
+<p><code>summarize_taxa_through_plots.py</code> is a QIIME workflow script that calculates summaries of OTUs at different taxonomic levels. Documentation is <a href="http://qiime.org/scripts/summarize_taxa_through_plots.html">here</a>.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">summarize_taxa_through_plots.py -o taxa_summary_even2212/ -i Schloss_otu_table_even2212.biom -m Schloss_Map.txt
+</code></pre></div>
+<p>When the script is finished, navigate into the results file, and into the &quot;taxa_summary_plots&quot; and find the html area and bar charts.  If you are on a Mac, use the <code>open</code> command to open the html file in your browser. Neato!</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">open area_charts.html
+</code></pre></div>
+<p><img src="https://github.com/edamame-course/docs/raw/gh-pages/img/QIIMETutorial2_IMG/IMG_16.jpg" alt="img16"></p>
+
+<p>To view the HTML files, the EC2 users will need to execute the following command:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">cp -r taxa_summary_even2212/taxa_summary_plots/ ../Dropbox/
+</code></pre></div>
+<p>If the file doesn&#39;t open correctly, EC2 users may need to download the folder from Dropbox and unzip the folder (7-Zip --&gt; Extract Here), and then when they open the file, it will show the graphs and other hoopla!</p>
+
+<p>The links above and below the charts point to the raw data or other summaries.  Spend some time exploring all of the different links.  Scroll over the charts and notice how the SampleID and taxonomic assignment &quot;pop&quot; up.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">open bar_charts.html
+</code></pre></div>
+<p>As you are navigating to these html files, notice that the script has produced an OTU/biom table for every taxonomic level (designated by the &quot;L&quot;).  The &quot;L&quot; stands for &quot;lineage&quot;, and each &quot;level&quot; is designated by a number.  L1 is Domain, L2 is Phylum, L3 is Class, etc.  The more resolved the lineage (higher number), the less accurate the definition (e.g., L6 is not entirely and consistently the same as  &quot;genus&quot;).</p>
+
+<p>The taxa_summary_plots/charts subdirectory contains individual files of all of the charts, but their file names are not useful.  The easiest way to view individual charts is to start with the html page, and then click on the &quot;View Chart&quot; link below each figure, which points to this directory.</p>
+
+<p><img src="https://github.com/edamame-course/docs/raw/gh-pages/img/QIIMETutorial2_IMG/IMG_15.jpg" alt="img15"></p>
+
+<p>In your browser, carefully inspect and interact with this quick charts.  Though these are not publication-ready, they are a great first exploration of the taxa in the dataset.</p>
+
+<p>(We will test differences in alpha diversity in R.)</p>
+
+<h2 id="where-to-find-qiime-resources-and-help">Where to find QIIME resources and help</h2>
+
+<ul>
+<li> <a href="qiime.org">QIIME</a> offers a suite of developer-designed <a href="http://www.qiime.org/tutorials/tutorial.html">tutorials</a>.</li>
+<li> <a href="http://www.qiime.org/scripts/index.html">Documentation</a> for all QIIME scripts.</li>
+<li> There is a very active <a href="https://groups.google.com/forum/#!forum/qiime-forum">QIIME Forum</a> on Google Groups.  This is a great place to troubleshoot problems, responses often are returned in a few hours!</li>
+<li> The <a href="http://qiime.wordpress.com/">QIIME Blog</a> provides updates like bug fixes, new features, and new releases.</li>
+<li> QIIME development is on <a href="https://github.com/biocore/qiime">GitHub</a>.</li>
+</ul>
+
+<hr>
+
+<hr>
+
+
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'edamame'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+                    </div>
+
+                
+            </div>
+
+
+            <div class=row-fluid>
+                <div id=footer class=span12>
+                    Documentation for <a href="http://edamame-course.org">EDAMAME</a>.
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function orderNav() {
+                var list,
+                    section,
+                    header,
+                    sections = [],
+                    lists = {},
+                    headers = {};
+
+                var navUl = document.querySelectorAll('#navigation ul')[0],
+                    navLis = document.querySelectorAll('#navigation ul li');
+
+                if (!navUl) return;
+
+                for (var i = 0; i < navLis.length; i++) {
+                    var order, li = navLis[i];
+
+                    if (li.classList.contains('nav-header')) {
+                        section = li.textContent || li.innerText;
+                        sections.push(section);
+                        headers[section] = li;
+                        continue;
+                    }
+
+                    if (!lists[section]) {
+                        lists[section] = [];
+                    }
+
+                    order = parseFloat(li.getAttribute('data-order'))
+                    lists[section].push([order, li]);
+                }
+
+                for (var i = 0; i < sections.length; i++) {
+                    section = sections[i];
+                    list = lists[section].sort(function(a, b) {
+                        return a[0] - b[0];
+                    });
+
+                    if (header = headers[section]) {
+                        navUl.appendChild(header);
+                    }
+                    for (var j = 0; j < list.length; j++) {
+                        navUl.appendChild(list[j][1]);
+                    }
+                }
+            }
+
+            if (document.querySelectorAll) orderNav();
+        </script>
+    </body>
+</html>
